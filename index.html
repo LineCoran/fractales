@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fractales</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/range.css">
+    <link rel="stylesheet" href="styles/title.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="container">
+       <header class="header">
+           <h1 class="funny-title section-title intro">Creating fractal shapes</h1>
+       </header>
+        
+        <main class="main">
+            <div class="display" id="drawDisplay">
+                  <canvas id="canvas"></canvas>
+            </div>
+      
+            <section class="setting">
+              
+               <div class="setting__inner">
+                   <h2 class="setting__maintext">
+                       Setting
+                   </h2>
+                   <div class="choose__figure">
+                      <h3 class="choose__figure__title">
+                          Figure
+                      </h3>
+                      
+                      <div class="choose__figure__icon">
+                          <img src="img/triangle.png" alt="" class="figure__icon figure__icon--active" data-amountOfCorner="3">
+                          <img src="img/quater.png" alt="" class="figure__icon" data-amountOfCorner="4">
+                          <img src="img/pentagon.png" alt="" class="figure__icon" data-amountOfCorner="5">
+                      </div>
+                      <div class="button">
+                          <a href="#" class="boot" id="startPoints">TAP</a>
+                      </div>
+                      
+                   </div>
+                   
+                   <div class="range">
+                       <div class="range__inner">
+                           <p class="range__title">
+                               Amount iteration in second
+                           </p>
+                            <div> 
+                              <input type="range" value="1" min="1" max="100" id="sector" oninput="rangevalue.value=value"/>
+                              <output id="rangevalue">1</output>
+                            </div>
+                       </div>
+
+                    
+                       <div class="range__inner">
+                           <p class="range__title">
+                               Divided size
+                           </p>
+                            <div> 
+                              <input type="range" value="2" min="2" max="5" oninput="rangevalue1.value=value"/>
+                              <output id="rangevalue1">2</output>
+                            </div>
+                       </div>
+                   
+                   
+                       <div class="range__inner">
+                           <p class="range__title">
+                               Pixel size
+                           </p>
+                            <div> 
+                              <input type="range" value="1" min="1" max="25" oninput="rangevalue2.value=value"/>
+                              <output id="rangevalue2">1</output>
+                            </div>
+                       </div>
+                       <div class="button">
+                           <a href="#" class="boot" id="start">START</a>
+                       </div>
+                       
+                   </div>
+                   
+                   
+                   
+                   <div class="amount__iteration">
+                        <div class="iteration__title">
+                            Количество точек:
+                        </div>
+                        <div id="score"class="iteration__score"></div>
+                   </div>
+                   
+                   <p class="point" id="point">point</p>
+               </div>
+                    
+            </section>
+            
+        </main>
+   </div>
+    <script src="scripts/fractales.js"></script>
+    <script src="scripts/range.js"></script>
+    <script src="scripts/iconFigure.js"></script>
+</body>
+</html>
