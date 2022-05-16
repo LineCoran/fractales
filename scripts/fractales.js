@@ -33,6 +33,7 @@ let fractales = {
     
     amountOfClickStart: 0,
     
+    
     getAmountOfCorner: function(){
         let choosedFigure = document.getElementsByClassName("figure__icon--active");
         
@@ -132,16 +133,20 @@ let fractales = {
         
         let that = this;
        
-        cvs.addEventListener('click', function(){
+        cvs.addEventListener('click', function(event){
             that.startSetting();
+            let getPoint = event.target.getBoundingClientRect();
+            let x = event.clientX - getPoint.left;
+            let y = event.clientY - getPoint.top;
+          
             if(that.amountOfUserPoint>0){
                 
-                that.drawPoint(event.clientX-365, event.clientY-145);
+                that.drawPoint(x, y);
                 
-                that.userPoint[0] = event.clientX-365;
-                that.userPoint[1] = event.clientY-145;
+                that.userPoint[0] = x;
+                that.userPoint[1] = y;
                 
-                that.changePositionOfTextPoint(that.userPoint[0]+340, that.userPoint[1]+120);
+                that.changePositionOfTextPoint(that.userPoint[0]+getPoint.left, that.userPoint[1]+getPoint.top);
                 that.amountOfUserPoint--;
                 that.iteration = that.amountOfCorners+1;;
                 score.innerHTML = that.iteration; 
@@ -185,7 +190,7 @@ let fractales = {
             that.userPoint[1] = y;
             
             that.drawPoint(that.userPoint[0], that.userPoint[1]);
-            that.changePositionOfTextPoint(that.userPoint[0]+340, that.userPoint[1]+120);
+            that.changePositionOfTextPoint(that.userPoint[0]+172, that.userPoint[1]+99);
         
             if(that.iteration>0){
                 that.iteration++;
