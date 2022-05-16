@@ -1,38 +1,29 @@
-/*#61892F - #86C232 - #222629 - #474B4F - #6B6E70*/
-
-* {
+*, h1, h2, h3, h4, h5, h6 {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #222629;
-    background-image: url(../img/background.jpg);
-    
-    
+    font-family: 'Space Mono', monospace;
+    color: white;
+    background-color: #000;    
 }
 
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    
 }
 
 .header {
-    width: 65%;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 20px;
+    
     margin: 20px auto;
 }
 
 .intro {
-    font-family: 'Anton', sans-serif;
     text-align: center;
-    font-size: 72px;
+    font-size: 40px;
     text-transform: uppercase;
     margin: 0;
 }
@@ -44,7 +35,6 @@ body {
     width: 100%;   
 }
 .display {
-    
     width: 60%;
     height: 100%;
     max-width: 100%;
@@ -64,28 +54,26 @@ canvas {
     width: 40%;
     height: 100%;
     padding: 20px;
-    
     border-radius: 3px;
 }
 
 .setting__inner {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     padding: 5px 20px;
     height: 98%;
     width: 90%;
-    
+    border: 1px solid #fff; 
 }
 
 .setting__maintext {
     font-weight: 700;
-    font-size: 34px;
+    font-size: 30px;
     margin-bottom: 20px;
     border-bottom: 1px solid white;
     width: 50%;
     margin: 0 auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .choose__figure{
@@ -95,7 +83,6 @@ canvas {
 
 .choose__figure__title {
     margin-bottom: 0px;
-    color: white;
 }
 .choose__figure__icon{
     width: 100%;
@@ -125,7 +112,7 @@ canvas {
     opacity: 1;
     height: 70px;
     width: 70px;
-    border: 6px solid rgb(44, 103, 234);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
 }
 
@@ -137,34 +124,42 @@ canvas {
 .button {
     width: 100%;
     margin: 0 auto;
-    height: 30px;
+    height: 45px;
 }
 
 .boot {
+    color: #fff;
     display: block;
     width: 30%;
-    border: 1px solid rgb(128, 162, 237);
+    border: 1px solid rgb(255, 255, 255);
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
     border-radius: 10px;
-    padding: 6px 10px;
+    padding: 5px 6px;
     margin: 0px auto;
-    color: #c9c9e3;
     margin-top: 8px;
-    transition: 0.2s linear;
+    transition: 0.1s linear;
 }
 
 .boot:hover{
-    border: 3px solid rgb(44, 103, 234);
-    padding: 4px 10px;
+    border: 3px solid rgb(255, 255, 255);
+    padding: 3px 10px;
+}
+
+.amount__iteration {
+    display: flex;
+    justify-content: center;
+}
+
+.iteration__title {
+    margin-right: 20px;
 }
 
 .point {
-    color: rgb(44, 103, 234);
+    color: ;
     display: block;
     position: absolute; 
-    font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
 }

@@ -197,11 +197,11 @@ let fractales = {
     
     changePositionOfTextPoint: function(x, y) {
             pointText.style.display = "block";
-            pointText.style.font = "15px serif";
+            pointText.style.font = "15px";
             pointText.innerHTML = 'Point';
             pointText.style.left = String(x)+"px";
             pointText.style.top = String(y)+"px";
-            pointText.style.color = "rgb(26, 45, 87)";
+            pointText.style.color = "black";
         },
     
     drawPoint: function(xCoordinate, yCoordinate){
@@ -213,7 +213,7 @@ let fractales = {
     },
     
     drawStartTextOfPoints: function(name, x, y) {
-        ctx.font = "20px serif";
+        ctx.font = "20px monospace";
         ctx.fillStyle = "black";
         ctx.fillText(name, x+7, y);
     },
